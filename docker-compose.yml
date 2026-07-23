@@ -4,7 +4,7 @@ services: #lista de servicos/conteineres que vao rodar junto
     container_name: curador_postgres #ao ligar o conteiner, ele recebe esse nome
     environment: #ao ligar o banco pela primeira vez, passa essas variaveis de ambiente para ele
       POSTGRES_USER: maia #definimos o usuario master, a senha e o nome do banco de dados criado ao ligar
-      POSTGRES_PASSWORD: 2580
+      POSTGRES_PASSWORD: "2580"
       POSTGRES_DB: curador_db
     ports:
-      - "5432:5432" #relacao entre "porta_do_pc : porta_do_conteiner"
+      - "5433:5432" #relacao entre "porta_do_pc : porta_do_conteiner"
