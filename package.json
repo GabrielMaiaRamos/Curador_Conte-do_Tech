@@ -20,7 +20,12 @@
   "homepage": "https://github.com/GabrielMaiaRamos/Curador_Conte-do_Tech#readme",
   "devDependencies": {
     "@types/node": "^26.1.1",
+    "@types/pg": "^8.20.0",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "pg": "^8.22.0"
   }
 }
