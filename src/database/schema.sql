@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS articles ( --cria uma tabela com esse nome (articles)
     --url: link do atigo; TEXT: texto sem limite de tamanho fixo; UNIQUE: nao existirao dois artigos com o mesmo link
     summary TEXT,
     --sumary: resumo do artigo; not que esta sem DEFAULT nem NOT NULL, ou seja, é totalmente opicional
+    source VARCHAR(100) NOT NULL,
+    --source pra guardar a fonte do artigo
     is_read BOOLEAN DEFAULT false,
     --is_read: se ja leu o artigo; BOOLEAN: tipo do dado; DEFAULT false: se nao disser se leu ou nao, o banco assume como não lido
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
