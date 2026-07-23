@@ -5,6 +5,14 @@ import path from 'path';
 //2. importando o pool (call center)
 import pool from '../database.js';
 
+//aqui é uma importacao necessarias pq no package.json eu coloquei o TYPE como MODULES, e
+//esse type nao tem o __dirname como variavel padrao, entao temos que cria-la
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+//import.meta.url tem a URL completa do arquivo atual e o fileURLToPath converte em um caminho Windows normal 
+const __dirname = path.dirname(__filename);
+//path.dirname extrai so a pasta do caminho (remove o nome do arquivo atual)
+
 async function iniciarBanco(){
     try{
         console.log("Lendo o arquivo schema.sql");
